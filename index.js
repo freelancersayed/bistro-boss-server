@@ -67,6 +67,7 @@ async function run() {
       if (!isAdmin) {
         return res.status(403).send({ message: "forbidden access" });
       }
+      next()
     };
 
     // users related api
